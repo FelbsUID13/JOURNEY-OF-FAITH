@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journey of Faith - Feedback</title>
+    <link rel="stylesheet" href="rate us.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Give us a feedback!</h1>
+
+        <!-- Rating Section -->
+        <div class="rating">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+        </div>
+        <p>Your Rating: <span id="rating-value">0</span>/5</p>
+
+        <!-- Comment Section -->
+        <div class="comment-section">
+            <textarea id="comment" placeholder="Leave your anonymous comment..."></textarea>
+            <button onclick="submitComment()">Submit Comment</button>
+        </div>
+
+        <h2>Submitted Comments:</h2>
+        <div id="comments-list">
+            <!-- Comments will appear here -->
+        </div>
+    </div>
+
+    <script src="rate us.js"></script>
+</body>
+</html>

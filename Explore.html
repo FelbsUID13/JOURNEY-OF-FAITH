@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stations of the Cross</title>
+    <link rel="stylesheet" href="explore.css">
+</head>
+<body>
+    <div class="gallery-wrapper">
+        <h1 class="gallery-title">Stations of the Cross</h1>
+        <div class="gallery-container">
+            <img id="galleryImage" class="gallery-image" src="" alt="Station Image">
+        </div>
+        <button id="prevButton" class="arrow arrow-left">&lt;</button>
+        <button id="nextButton" class="arrow arrow-right">&gt;</button>
+        <button id="stationButton" class="station-button">Station 1</button>
+        <button id="stationPrayer" class="station-prayer">Prayer</button>
+    </div>
+
+    <div id="stationPopup">
+        <div class="popup-content">
+            <div class="station-buttons"></div>
+        </div>
+    </div>
+
+    <div id="prayerPopup">
+        <div class="prayer-content">
+            <button id="prevButton" class="back-arrow">&lt;</button>
+
+            <div class="language-content english-content">
+                <h3 id="stationTitleEnglish"></h3>
+                <p id="stationContentEnglish"></p>
+            </div>
+            <div class="language-content hiligaynon-content">
+                <h3 id="stationTitleHiligaynon"></h3>
+                <p id="stationContentHiligaynon"></p>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="explore.js"></script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f000;
+    padding-top: 0px;
+}
+
+.gallery-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+    justify-content: flex-start;
+}
+
+.gallery-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.gallery-container {
+    width: 800px;
+    height: 350px;
+    margin: 0 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+    border: none;
+    outline: none;
+}
+
+.arrow:hover, .arrow:focus {
+    background-color: rgba(0,0,0,0.7);
+}
+
+.arrow:focus {
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.5);
+}
+    
+.arrow-left {
+    left: -50px;
+}
+
+.arrow-right {
+    right: -50px;
+}
+
+#stationPopup, #prayerPopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%;
+    height: 70%;
+    max-width: 500px;
+    max-height: 80vh;
+    border: 2px solid #ddd;
+    overflow-y: auto;
+}
+
+.prayer-content {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    height: 80%;
+    max-width: 1200px;
+    max-height: 80vh;
+    overflow-y: auto;
+    border: 2px solid #ddd;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.back-arrow{
+
+    left: -50px;
+    width: 80px;
+    height: 60px;
+    background: transparent;
+    border-style: none;
+}
+
+.language-content {
+    background-color: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 48%;
+    overflow-y: auto;
+}
+
+.english-content {
+    border-right: 1px solid #ddd;
+}
+
+.station-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.station-button, .station-prayer {
+    width: 100%;
+    height: 60px;
+    padding: 10px 15px;
+    background-color: #ffffff;
+    color: rgb(10, 10, 10);
+    border: 2px solid black; 
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#stationButton, #stationPrayer {
+    position: absolute;
+    bottom: 5%;
+    width: 200px;
+}
+
+#stationButton {
+    left: 30%;
+    transform: translateX(-50%);
+}
+
+#stationPrayer {
+    right: 30%;
+    transform: translateX(50%);
+}
+
+.station-button:hover, .station-prayer:hover {
+    background-color: hsl(0, 0%, 1%);
+    color: #f0f0f0;
+    transform: scale(1.05);
+    border-color: #fdfdfd;
+}
+
+#stationButton:hover {
+    transform: translateX(-50%) scale(1.05);
+}
+
+#stationPrayer:hover {
+    transform: translateX(50%) scale(1.05);
+}
+#stationContentEnglish, #stationContentHiligaynon {
+    white-space: pre-wrap;
+}
+
+
+
+@media (max-width: 740px) {
+    .gallery-wrapper {
+        height: 96vh;
+        padding-top: 10px;
+    }
+
+    .gallery-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .gallery-container {
+        width: calc(100% - 40px);
+        height: auto;
+        aspect-ratio: 3 / 2;
+    }
+
+    .arrow {
+        font-size: 1rem;
+        padding: 5px;
+    }
+
+    .arrow-left {
+        left: 5px;
+    }
+
+    .arrow-right {
+        right: 5px;
+    }
+
+    .popup-content, .prayer-content {
+        width: 90%;
+        height: 90%;
+        max-width: none;
+    }
+
+    .station-buttons {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 300px;
+    }
+
+    .station-button, .station-prayer {
+        height: 50px;
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    #stationButton, #stationPrayer {
+        width: 40%;
+        bottom: 3%;
+    }
+
+    #stationButton {
+        left: 25%;
+    }
+
+    #stationPrayer {
+        right: 25%;
+    }
+}
